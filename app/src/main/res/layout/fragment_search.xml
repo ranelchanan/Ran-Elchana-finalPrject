@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mta.com.final_project.searchFragment">
+
+
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:gravity="center"
+       android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+            android:id="@+id/radioGroup_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            app:bootstrapBrand="primary"
+            app:buttonMode="radio"
+
+            app:roundedCorners="true"
+            app:showOutline="true">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/LostRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="Lost"
+                app:bootstrapBrand="regular"
+                app:bootstrapSize="xl"
+                app:checked="true"
+                 />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/FoundRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Found"
+                app:bootstrapSize="xl"
+                app:bootstrapBrand="primary" />
+
+        </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+    </LinearLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:bufferType="normal"
+        android:gravity="left"
+        android:text="Search By Loctaion:"
+        app:bootstrapBrand="info"
+        app:roundedCorners="true" />
+
+    <fragment
+        android:id="@+id/place_autocomplete_fragment"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In raduios:"
+            app:bootstrapBrand="primary"
+            />
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:inputType="number"
+            android:id="@+id/raduios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fadingEdge="vertical"
+        android:gravity="left"
+        android:text="Search By Time"
+        app:bootstrapBrand="info"
+        app:roundedCorners="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/showdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Date"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="sm" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/showTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+
+            android:text="Set hour"
+            app:bootstrapSize="sm"
+            app:bootstrapBrand="primary" />
+
+
+    </LinearLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:id="@+id/SelectedTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/holo_blue_bright"
+        android:text="no time set"
+        app:bootstrapBrand="secondary" />
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:text="Search By Type"
+
+        app:bootstrapBrand="info"
+        app:roundedCorners="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
+        android:id="@+id/animalType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        app:bootstrapBrand="regular"
+        app:bootstrapExpandDirection="down"
+        app:bootstrapSize="md"
+        app:bootstrapText="Choose animal Type"
+        app:dropdownResource="@array/default_animal_type"
+        app:roundedCorners="true" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/saveSearchParams"
+            android:text="Save this search and get notifications "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="Submit"
+        app:bootstrapBrand="primary" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

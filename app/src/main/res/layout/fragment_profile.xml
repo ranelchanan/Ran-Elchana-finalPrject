@@ -1,0 +1,87 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mta.com.final_project.ProfileFragment"
+    android:id="@+id/profileFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImageView_editProfileActivity"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/circular_border"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+    <TextView
+        android:id="@+id/emailTextView_profileFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="8dp"/>
+
+
+    <TextView
+        android:id="@+id/usernameTextView_profileFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:id="@+id/phoneNumberTextView_profileFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="70dp">
+
+            <Button
+                android:id="@+id/logoutButton_profileFragment"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/circle_button"
+                android:drawableTop="@drawable/ic_log_out_black_24dp"
+                android:paddingTop="20dp"
+                android:text="Log Out"
+                android:textSize="12dp"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/EditProfileButton_profileFragment"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/circle_button"
+                android:drawableTop="@drawable/ic_edit_black_24dp"
+                android:paddingTop="20dp"
+                android:text="Edit"
+                android:textSize="12sp"
+                android:textColor="#fff" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

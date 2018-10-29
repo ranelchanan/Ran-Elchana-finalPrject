@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Final_Project</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_menu_item">Home</string>
+    <string name="post_menu_item">Post</string>
+    <string name="profile_menu_item">Profile</string>
+    <string name="Message_menu_item">Message</string>
+    <string name="default_animal_type">Animal\'s type</string>
+    <string name="dog">Dog</string>
+    <string name="cat">Cat</string>
+    <string name="other">Other</string>
+
+    <string name="default_animal_size">Animal\'s size</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+
+    <string name="default_animal_dangerous">Is the animal dangerous?</string>
+    <string name="dangerous">Dangerous</string>
+    <string name="not_dangerous">Not Dangerous</string>
+
+    <string name="lost">Lost</string>
+    <string name="found">Found</string>
+
+    <string name="lost_animals_db">lostAnimals</string>
+    <string name="found_animals_db">foundAnimals</string>
+    <string-array name="default_animal_type">
+        <item><string>Dog</string></item>
+        <item><string>Cat</string></item>
+        <item><string>Other</string></item>
+
+    </string-array>
+    <string-array name="default_animal_size">
+        <item><string>Big</string></item>
+        <item><string>Medium</string></item>
+        <item><string>Small</string></item>
+
+    </string-array>
+    <string name="channel_name" >channel_name</string>
+    <string name="channel_description" >channel_description</string>
+    <string name="default_notification_channel_id">"1"</string>
+</resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/card_view_layout">
+    <data>
+        <variable name="item" type="mta.com.final_project.model.AnimalCardDetails"/>
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    >
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/browser_actions_bg_grey">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImageView_cardView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/no_animal_image" />
+
+            <TextView
+                android:id="@+id/usernameTextView_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/userImageView_cardView"
+                android:layout_above="@+id/animalImageView_cardView"
+                android:gravity="center_vertical"
+                android:maxLines="3"
+                android:textColor="#222"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/timeAndDate_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:layout_above="@+id/animalImageView_cardView"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="#222"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/animalImageView_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/userImageView_cardView"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_animal_image" />
+
+            <TextView
+                android:id="@+id/titleTextView_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/animalImageView_cardView"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:textColor="#222"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/locationTextView_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTextView_cardView"
+                android:paddingStart="8dp"
+                android:textColor="@color/darkBlue"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+
+            <TextView
+                android:id="@+id/animalDescriptionTextView_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationTextView_cardView"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#666"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="3"/>
+
+
+            <TextView
+                android:id="@+id/deleteCardTextView_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textColor="@color/red"
+                android:layout_below="@+id/animalDescriptionTextView_cardView"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/SendMessageCardTextView_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SendMessage"
+                android:textColor="@color/red"
+                android:layout_below="@+id/animalDescriptionTextView_cardView"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+
+                />
+            <!--<TextView-->
+                <!--android:id="@+id/commentTextView_cardView"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:text="Comment"-->
+                <!--android:paddingStart="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingEnd="8dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:textColor="@color/darkBlue"-->
+                <!--android:textSize="14sp" />-->
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
+</layout>
+
+
+
+

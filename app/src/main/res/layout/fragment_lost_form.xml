@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mta.com.final_project.FoundFormFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                    android:id="@+id/radioGroup_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    app:buttonMode="radio"
+                    app:roundedCorners="true"
+
+                    app:showOutline="true">
+
+                    <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:id="@+id/LostRadioButton_publish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Lost"
+                        app:bootstrapBrand="primary"
+                        app:checked="true" />
+
+                    <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:id="@+id/FoundRadioButton_publish"
+                        android:layout_width="wrap_content"
+                        android:text="Found"
+                        app:bootstrapBrand="primary"
+                        android:layout_height="wrap_content" />
+
+                </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/addPhotoImageView_lostFormFragment"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/no_animal_image"/>
+
+
+
+                    <ImageButton
+                        android:id="@+id/cameraIcon_lostFormFragment"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/addPhotoImageView_lostFormFragment"
+                        android:background="@drawable/circle_button"
+                        android:src="@drawable/ic_add_a_photo_black_20dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                    android:id="@+id/radioGroup_lostFormFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    app:buttonMode="radio"
+                    app:roundedCorners="true"
+                    app:showOutline="true">
+
+                    <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:id="@+id/currentLocationRadioButton_lostFormFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use current location"
+                        app:checked="true" />
+
+                    <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:id="@+id/enterLocationRadioButton_lostFormFragment"
+                        android:layout_width="wrap_content"
+                        android:text="differnt location"
+                        android:layout_height="wrap_content" />
+
+                </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+
+
+
+
+
+
+
+            </RelativeLayout>
+            <fragment
+                android:id="@+id/place_autocomplete_fragment1"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/radioGroup_lostFormFragment"
+
+                />
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/titleEditText_lostFormFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:hint="Title" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+            <com.beardedhen.androidbootstrap.BootstrapDropDown
+                android:id="@+id/animalType_Post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bootstrapText="animal Type"
+                app:bootstrapBrand="primary"
+                app:bootstrapExpandDirection="down"
+                app:dropdownResource="@array/default_animal_type"
+                app:roundedCorners="true"
+                />
+
+                <com.beardedhen.androidbootstrap.BootstrapDropDown
+                    android:id="@+id/animalSize_Post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:bootstrapBrand="primary"
+                    app:bootstrapExpandDirection="down"
+                    app:bootstrapText="animal Size"
+                    app:dropdownResource="@array/default_animal_size"
+                    app:roundedCorners="true" />
+            </TableRow>
+
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/Dangerous"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dangerous Animal"
+                />
+
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/animalNameEditText_lostFormFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:hint="Animal's Name" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/chipNumberEditText_lostFormFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:inputType="numberSigned"
+                android:hint="Chip number" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/descriptionEditText_lostFormFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_border"
+                android:gravity="top"
+                android:hint="Additional description"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp" />
+            <CheckBox
+                android:id="@+id/IHaveItCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:visibility="gone"
+                android:text="I have it!" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/submitButton_lostFormFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rectangle_button"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_lostFormFragment"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

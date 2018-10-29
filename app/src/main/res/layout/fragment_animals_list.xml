@@ -1,0 +1,38 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="mta.com.final_project.AnimalsListFragment">
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No resluts found , Try to Search again"
+        android:id="@+id/noResultFonud_Lost"
+        android:visibility="gone"/>
+    <ProgressBar
+        android:id="@+id/progressBar_lostAnimalsListFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/animalRecyclerView_lostAnimalsListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+      />
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+

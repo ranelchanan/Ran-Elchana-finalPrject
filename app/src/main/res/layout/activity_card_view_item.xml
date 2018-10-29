@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="mta.com.final_project.CardViewItemActivity">
+
+    <include
+        android:id="@+id/toolbar_cardViewItemActivity"
+        layout="@layout/toolbar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImageView_cardViewItemActivity"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/no_animal_image" />
+
+            <TextView
+                android:id="@+id/usernameTextView_cardViewItemActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/userImageView_cardViewItemActivity"
+                android:layout_above="@+id/animalImageView_cardViewItemActivity"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="#222"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/timeAndDate_cardViewItemActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:layout_above="@+id/animalImageView_cardViewItemActivity"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="#222"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/animalImageView_cardViewItemActivity"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/userImageView_cardViewItemActivity"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_animal_image" />
+
+            <TextView
+                android:id="@+id/titleTextView_cardViewItemActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/animalImageView_cardViewItemActivity"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:textColor="#222"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/locationTextView_cardViewItemActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTextView_cardViewItemActivity"
+                android:paddingStart="8dp"
+                android:textColor="@color/darkBlue"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+
+            <TextView
+                android:id="@+id/animalDescriptionTextView_cardViewItemActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationTextView_cardViewItemActivity"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#666"
+                android:textSize="14sp"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

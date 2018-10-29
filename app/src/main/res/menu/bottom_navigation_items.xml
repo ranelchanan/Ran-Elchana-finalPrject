@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeItem_bottomNavigationMenu"
+        android:icon="@drawable/ic_search_black_24dp"
+        app:showAsAction="ifRoom"
+        android:title="@string/home_menu_item" />
+    <item
+        android:id="@+id/lostAnimalItem_bottomNavigationMenu"
+        android:icon="@drawable/ic_create_black_24dp"
+        app:showAsAction="ifRoom"
+        android:title="@string/post_menu_item"/>
+    <item
+        android:id="@+id/message_bottomNavigationMenu"
+        android:icon="@drawable/ic_mail_outline_black_24dp"
+        app:showAsAction="ifRoom"
+        android:title="@string/Message_menu_item" />
+
+    <item
+        android:id="@+id/profileItem_bottomNavigationMenu"
+        android:icon="@drawable/ic_account_box_black_24dp"
+        app:showAsAction="ifRoom"
+        android:title="@string/profile_menu_item" />
+
+
+</menu>
